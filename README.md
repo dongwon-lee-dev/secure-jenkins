@@ -35,7 +35,7 @@ sudo apt install caddy
 
 sudo systemctl enable --now caddy
 ```
-
+### nip.io is a free DNS service that generates IP-based domains with HTTPS support for development and testing purposes.
 /etc/caddy/Caddyfile
 ```bash
 54.224.96.252.nip.io {
