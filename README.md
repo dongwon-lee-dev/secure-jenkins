@@ -22,8 +22,7 @@ sudo apt update
 # Install Jenkins
 sudo apt install jenkins -y
 
-sudo systemctl start jenkins
-sudo systemctl enable jenkins
+sudo systemctl enable --now jenkins
 ```
 
 ## Install Caddy
@@ -33,27 +32,14 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 sudo apt update -y
 sudo apt install caddy
+
+sudo systemctl enable --now caddy
 ```
 
 /etc/caddy/Caddyfile
 ```bash
-{
-  local_certs
-}
-
-:443 {
-        # Set this path to your site's directory.
-        #root * /usr/share/caddy
-
-        # Enable the static file server.
-        #file_server
-
-        # Another common task is to set up a reverse proxy:
-        tls internal
+54.224.96.252.nip.io {
         reverse_proxy localhost:8080
-
-        # Or serve a PHP site through php-fpm:
-        # php_fastcgi localhost:9000
 }
 ```
 
