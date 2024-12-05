@@ -1,6 +1,6 @@
 # secure-jenkins
 
-## Install Jenkins
+## 1) Install Jenkins
 ```bash
 sudo apt update -y
 
@@ -25,7 +25,7 @@ sudo apt install jenkins -y
 sudo systemctl enable --now jenkins
 ```
 
-## Install Caddy
+## 2) Install Caddy
 ```bash
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key add -
