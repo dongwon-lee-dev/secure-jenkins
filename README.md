@@ -1,4 +1,5 @@
 # secure-jenkins
+![Diagram](diagram/jpeg)
 
 ## 1) Install Jenkins
 ```bash
